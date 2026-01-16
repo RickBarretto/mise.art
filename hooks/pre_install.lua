@@ -40,7 +40,6 @@ function PLUGIN:PreInstall(ctx)
 end
 
 -- Helper function for platform detection (uncomment and modify as needed)
---[[
 local function get_platform()
     -- RUNTIME object is provided by mise/vfox
     -- RUNTIME.osType: "Windows", "Linux", "Darwin"
@@ -53,17 +52,15 @@ local function get_platform()
     -- Adjust these mappings based on how your tool names its releases
     local platform_map = {
         ["darwin"] = {
-            ["amd64"] = "darwin-amd64",
-            ["arm64"] = "darwin-arm64",
+            ["amd64"] = "macos-amd64",
+            ["arm64"] = "macos-arm64",
         },
         ["linux"] = {
             ["amd64"] = "linux-amd64",
             ["arm64"] = "linux-arm64",
-            ["386"] = "linux-386",
         },
         ["windows"] = {
             ["amd64"] = "windows-amd64",
-            ["386"] = "windows-386",
         }
     }
 
@@ -75,4 +72,3 @@ local function get_platform()
     -- Default fallback
     return "linux-amd64"
 end
---]]
