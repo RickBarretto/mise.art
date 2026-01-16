@@ -7,20 +7,20 @@ function PLUGIN:PreInstall(ctx)
     -- ctx.runtimeVersion contains the full version string if needed
 
     -- Example 1: Simple binary download
-    -- local url = "https://github.com/<GITHUB_USER>/<GITHUB_REPO>/releases/download/v" .. version .. "/<TOOL>-linux-amd64"
+    -- local url = "https://github.com/arturo-lang/arturo/releases/download/v" .. version .. "/arturo-linux-amd64"
 
     -- Example 2: Platform-specific binary
     -- local platform = get_platform() -- Uncomment the helper function above
-    -- local url = "https://github.com/<GITHUB_USER>/<GITHUB_REPO>/releases/download/v" .. version .. "/<TOOL>-" .. platform
+    -- local url = "https://github.com/arturo-lang/arturo/releases/download/v" .. version .. "/arturo-" .. platform
 
     -- Example 3: Archive (tar.gz, zip) - mise will extract automatically
-    -- local url = "https://github.com/<GITHUB_USER>/<GITHUB_REPO>/releases/download/v" .. version .. "/<TOOL>-" .. version .. "-linux-amd64.tar.gz"
+    -- local url = "https://github.com/arturo-lang/arturo/releases/download/v" .. version .. "/arturo-" .. version .. "-linux-amd64.tar.gz"
 
     -- Example 4: Raw file from repository
-    -- local url = "https://raw.githubusercontent.com/<GITHUB_USER>/<GITHUB_REPO>/" .. version .. "/bin/<TOOL>"
+    -- local url = "https://raw.githubusercontent.com/arturo-lang/arturo/" .. version .. "/bin/arturo"
 
     -- Replace with your actual download URL pattern
-    local url = "https://example.com/<TOOL>/releases/download/" .. version .. "/<TOOL>"
+    local url = "https://example.com/arturo/releases/download/" .. version .. "/arturo"
 
     -- Optional: Fetch checksum for verification
     -- local sha256 = fetch_checksum(version) -- Implement if checksums are available
@@ -29,7 +29,7 @@ function PLUGIN:PreInstall(ctx)
         version = version,
         url = url,
         -- sha256 = sha256, -- Optional but recommended for security
-        note = "Downloading <TOOL> " .. version,
+        note = "Downloading arturo " .. version,
         -- addition = { -- Optional: download additional components
         --     {
         --         name = "component",

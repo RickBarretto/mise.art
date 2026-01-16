@@ -25,7 +25,7 @@ function PLUGIN:EnvKeys(ctx)
     --[[
     return {
         {
-            key = "<TOOL>_HOME",
+            key = "arturo_HOME",
             value = mainPath,
         },
         {

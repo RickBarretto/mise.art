@@ -124,7 +124,7 @@ This sets up automatic linting and formatting on git commits.
 
 1. Link your plugin for development:
 ```bash
-mise plugin link --force <TOOL> .
+mise plugin link --force arturo .
 ```
 
 2. Run tests:
@@ -161,7 +161,7 @@ hk fix        # Run linters and auto-fix issues
 
 Enable debug output:
 ```bash
-MISE_DEBUG=1 mise install <TOOL>@latest
+MISE_DEBUG=1 mise install arturo@latest
 ```
 
 ## Files

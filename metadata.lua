@@ -13,7 +13,7 @@ PLUGIN = { -- luacheck: ignore
 
     -- Optional: Legacy version files this plugin can parse
     -- legacyFilenames = {
-    --     ".<TOOL>-version",
-    --     ".<TOOL>rc"
+    --     ".arturo-version",
+    --     ".arturorc"
     -- }
 }
