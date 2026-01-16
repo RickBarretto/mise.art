@@ -11,9 +11,4 @@ PLUGIN = { -- luacheck: ignore
 
     minRuntimeVersion = "0.2.0",
 
-    -- Optional: Legacy version files this plugin can parse
-    -- legacyFilenames = {
-    --     ".arturo-version",
-    --     ".arturorc"
-    -- }
 }
