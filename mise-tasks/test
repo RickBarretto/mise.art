@@ -4,15 +4,15 @@ set -euo pipefail
 
 mise plugin link --force arturo .
 mise cache clear
-mise install arturo@1.0.0
+mise install arturo@0.10.0
 
 # Capture and display the output while also verifying it
-output=$(mise exec "arturo@1.0.0" -- "arturo" --version)
+output=$(mise exec "arturo@0.10.0" -- "arturo" --version)
 echo "arturo output: $output"
 
-if echo "$output" | grep -q 'arturo@1.0.0'; then
+if echo "$output" | grep -q 'arturo@0.10.0'; then
     echo "✓ Tests passed"
 else
-    echo "✗ Test failed: expected version arturo@1.0.0"
+    echo "✗ Test failed: expected version arturo@0.10.0"
     exit 1
 fi
