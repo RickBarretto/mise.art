@@ -1,4 +1,3 @@
--- hooks/post_install.lua
 -- Performs additional setup after installation
 -- Documentation: https://mise.jdx.dev/tool-plugin-development.html#postinstall-hook
 
@@ -75,4 +74,5 @@ function PLUGIN:PostInstall(ctx)
         end
         os.execute(copy_cmd)
     end
+
 end
