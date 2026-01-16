@@ -28,6 +28,7 @@ jobs:
         uses: msys2/setup-msys2@v2
         with:
           update: true
+          path-type: inherit
           install: base-devel
       - name: Install Windows deps (Lua 5.4)
         if: matrix.os == 'windows-latest'
