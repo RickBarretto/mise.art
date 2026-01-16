@@ -32,7 +32,7 @@
 **Install the plugin**
 
 ```sh
-mise plugin install arturo https://github.com/RickBarretto/mise.art
+mise plugin install arturo https://github.com/arturo-lang/mise-plugin
 ```
 
 **Install Arturo**
