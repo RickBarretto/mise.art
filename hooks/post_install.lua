@@ -5,7 +5,8 @@ function PLUGIN:PostInstall(ctx)
     local sdkInfo = ctx.sdkInfo[PLUGIN.name]
     local path = sdkInfo.path
     local sep = package.config:sub(1, 1)
-    local is_windows = RUNTIME and RUNTIME.osType == "Windows"
+    local runtime_os = RUNTIME and RUNTIME.osType and RUNTIME.osType:lower() or ""
+    local is_windows = runtime_os == "windows" or sep == "\\" or os.getenv("OS") == "Windows_NT"
 
     local function join(...)
         return table.concat({ ... }, sep)
@@ -14,7 +15,7 @@ function PLUGIN:PostInstall(ctx)
     local function ensure_dir(dir)
         local cmd
         if is_windows then
-            cmd = string.format('mkdir "%s" 2>nul 1>nul', dir)
+            cmd = string.format('cmd /C if not exist "%s" mkdir "%s" 1> nul 2> nul', dir, dir)
         else
             cmd = string.format('mkdir -p "%s"', dir)
         end
