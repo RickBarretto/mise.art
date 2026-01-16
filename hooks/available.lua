@@ -8,10 +8,10 @@ function PLUGIN:Available(ctx)
 
     -- Example 1: GitHub Tags API (most common)
     -- Replace arturo-lang/arturo with your tool's repository
-    local repo_url = "https://api.github.com/repos/arturo-lang/arturo/tags"
+    -- local repo_url = "https://api.github.com/repos/arturo-lang/arturo/tags"
 
     -- Example 2: GitHub Releases API (for tools that use GitHub releases)
-    -- local repo_url = "https://api.github.com/repos/arturo-lang/arturo/releases"
+    local repo_url = "https://api.github.com/repos/arturo-lang/arturo/releases"
 
     -- mise automatically handles GitHub authentication - no manual token setup needed
     local resp, err = http.get({
